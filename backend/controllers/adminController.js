@@ -119,6 +119,9 @@ const getStudentDetail = asyncHandler(async (req, res) => {
 // ---------- Dashboard statistics ----------
 
 const getStats = asyncHandler(async (req, res) => {
+  const [[{ totalAccounts }]] = await db.query(
+    "SELECT COUNT(*) AS totalAccounts FROM users"
+  );
   const [[{ totalStudents }]] = await db.query(
     "SELECT COUNT(*) AS totalStudents FROM users WHERE role = 'STUDENT'"
   );
@@ -130,7 +133,7 @@ const getStats = asyncHandler(async (req, res) => {
     "SELECT COUNT(*) AS totalResources FROM learning_resources"
   );
 
-  res.json({ totalStudents, totalCareers, totalSkills, totalResources });
+  res.json({ totalAccounts, totalStudents, totalCareers, totalSkills, totalResources });
 });
 
 module.exports = {
