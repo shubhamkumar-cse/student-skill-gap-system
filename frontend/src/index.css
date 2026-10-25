@@ -420,3 +420,30 @@ th { color: var(--color-text-muted); font-size: 10px; text-transform: uppercase;
  .career-empty-panel h2 { font-size:20px; }
  .skillpath-footer { flex-direction:column; gap:5px; }
 }
+
+
+/* Admin dashboard overview */
+.admin-dashboard { max-width:1300px; margin:0 auto; }
+.admin-dashboard-heading { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; margin-bottom:26px; }
+.admin-dashboard-heading h1 { margin:9px 0 6px; color:#202a43; font-size:30px; letter-spacing:-.055em; }
+.admin-dashboard-heading p { margin:0; font-size:12px; }
+.admin-status-pill { display:inline-flex; align-items:center; gap:8px; padding:9px 12px; border:1px solid #dff3eb; border-radius:99px; background:#f1fbf7; color:#238264; font-size:10px; font-weight:700; white-space:nowrap; }
+.admin-status-pill i { width:7px; height:7px; border-radius:50%; background:#20b486; }
+.admin-stats-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:17px; }
+.admin-stat-card { min-width:0; padding:22px; border:1px solid #e8eaf3; border-radius:16px; background:#fff; box-shadow:0 8px 25px #29345808; }
+.admin-stat-top { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.admin-stat-label { color:#818ba2; font-size:11px; font-weight:700; }
+.admin-stat-icon { display:grid; place-items:center; flex:0 0 37px; width:37px; height:37px; border-radius:12px; font-size:19px; }
+.admin-stat-icon.purple { background:#efedff; color:#6558e8; }
+.admin-stat-icon.green { background:#e2f8f1; color:#159b77; }
+.admin-stat-icon.blue { background:#e7f3ff; color:#377bb5; }
+.admin-stat-icon.amber { background:#fff2de; color:#bd7923; }
+.admin-stat-icon.pink { background:#ffedf4; color:#bd5581; }
+.admin-stat-number { margin-top:20px; color:#202a43; font:800 36px 'Manrope',sans-serif; letter-spacing:-.06em; overflow-wrap:anywhere; }
+.admin-stat-note { margin-top:5px; color:#9aa2b4; font-size:10px; }
+.admin-welcome-panel { display:flex; align-items:center; gap:15px; margin-top:19px; padding:21px; border:1px solid #e8e6ff; border-radius:15px; background:linear-gradient(110deg,#fff,#f8f7ff); }
+.admin-welcome-icon { display:grid; place-items:center; flex:0 0 42px; width:42px; height:42px; border-radius:13px; background:#efedff; color:#6558e8; font-size:22px; }
+.admin-welcome-panel h2 { margin:0 0 5px; color:#303951; font-size:14px; }
+.admin-welcome-panel p { margin:0; font-size:11px; }
+@media(max-width:900px) { .admin-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:520px) { .admin-dashboard-heading { align-items:flex-start; flex-direction:column; } .admin-dashboard-heading h1 { font-size:25px; } .admin-stats-grid { grid-template-columns:1fr; gap:11px; } .admin-stat-card { padding:18px; } .admin-stat-number { margin-top:13px; font-size:31px; } }
